@@ -1,0 +1,60 @@
+1) what is watch ?
+Ans: every time we made changes in typescript file we have to compile it in terminal and then it will make changes in js file so if dont want to again again run compile command then we can simply write tsc filename.ts --watch so it will watch a specific file for any changes. If any changes are made, it will automatically recompile.
+2) what is inheritance?
+Ans: Inheritance is one of the core concepts of object-oriented programming (OOPs). It is the mechanism in which one class derives the properties of another class. The class which inherits properties and methods is called the child class and the class whose properties and methods are inherited are called the parent class.
+3) what is namespace?
+Ans: 
+4) what is module?
+Ans: In TypeScript, a module is a file that contains TypeScript code and can export and import other modules, classes, interfaces, functions, or variables. Modules allow for better code organization, reuse.
+example file names: index9.ts, student.ts, teacher.ts.
+5) what is enum?
+Ans: Enums are a feature added to JavaScript in TypeScript which makes it easier to handle named sets of constants. By default an enum is number based, starting at zero, and each option is assigned an increment by one.
+6) what is tuple?
+Ans: A tuple is a typed array with a pre-defined length and types for each index.
+ types of each index means types of every value
+ example: index3.ts
+7) what is alias?
+ Ans: Type Aliases allow defining types with a custom name (an Alias)
+ example: index6.ts
+8) what is void type?
+ Ans: In TypeScript void function is a function that doesn't return any value, or returns undefined.
+9) what is unknown type?
+Ans: unknown is the type-safe counterpart of any . Anything is assignable to unknown , but unknown isn't assignable to anything but itself and any without a type assertion or a control flow based narrowing. Likewise, no operations are permitted on an unknown without first asserting or narrowing to a more specific type.
+10) what is any type?
+Ans: The any type in TypeScript is a workaround for cases when you don't know what type a value might be. It allows you to assign a variable or function parameter to be of literally any type.
+11) Difference between unknown and any 
+Ans: 
+1. unknown 
+The variables with unknown type can store the values of any type with strict type checking.
+1. any
+The any type also allows the variables to store values of any type but causes type-checking errors.
+2. unknown
+It offers type inference with refined type checking.
+2. any
+It does not offer the type inference.
+3. unknown
+Type checking is enforced more strictly on these variables.
+3. any
+Type checks can not be enforced on any type variable.
+4. unknown
+Variables with unknown type are not compatible with all other types.
+4. any
+any type variables are compatible with all other types available in TypeScript.
+12) what is union?
+Ans: A union type describes a value that can be one of several types. We use the vertical bar ( | ) to separate each type, so number | string | boolean is the type of a value that can be a number , a string , or a boolean.
+example: index5.ts
+13) what is intersection?
+Ans: In TypeScript, an intersection type is a way to combine multiple types into one. This new type will have all the properties and methods of the intersected types. Intersection types are denoted using the & operator.
+example: index5.ts
+14) what is type annotations?
+Ans: Type annotations involve explicitly specifying the type of a parameter or variable.
+example: index1.ts
+15) what is type inference?
+Ans: type inference occurs when TypeScript automatically determines the type based on the implementation.
+16) what is optional property?
+Ans: Optional Parameters in TypeScript are used when passing a value is optional.
+example: index4.ts
+17) what is Interfaces?
+Ans: Interfaces are a feature of TypeScript that allows us to define the structure or shape of an object and specify the properties and methods that an object has or should have.
+example: index.ts
+18)
