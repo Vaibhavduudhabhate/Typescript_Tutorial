@@ -16,8 +16,11 @@ Inheritance is a core concept of object-oriented programming (OOP). It allows on
 A namespace in TypeScript is used to group related code and avoid naming conflicts. It's a way of organizing and encapsulating code within a specific scope.
 
 ## 4. **Module**
-In TypeScript, a module is a file containing TypeScript code. Modules allow for better code organization by exporting and importing other modules, classes, interfaces, functions, or variables. Example filenames: index9.ts, student.ts, teacher.ts.
-
+In TypeScript, a module is a file containing TypeScript code. Modules allow for better code organization by exporting and importing other modules, classes, interfaces, functions, or variables. 
+```
+Example
+filenames: index9.ts, student.ts, teacher.ts.
+```
 ## 5. **Enum**
 Enums are a feature in TypeScript that makes it easier to handle named sets of constants. By default, enums are number-based, starting at zero, with each option incrementing by one.
 ```
