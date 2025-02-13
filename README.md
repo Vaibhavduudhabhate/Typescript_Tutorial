@@ -7,7 +7,8 @@ Every time we make changes in a TypeScript file, we need to compile it in the te
 ```bash
 tsc filename.ts --watch
 
-## 2. **Inheritance
+
+## 2. **Inheritance**
 Inheritance is a core concept of object-oriented programming (OOP). It allows one class to inherit properties and methods from another class. The class that inherits properties is called the child class, and the class being inherited from is called the parent class.
 
 ## 3. **Namespace
