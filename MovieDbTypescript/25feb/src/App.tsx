@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
     <nav>
-  <ul className="flex gap-[20px] justify-center items-center py-[30px] text-[20px] bg-gray-900">
+  <ul className="flex gap-[20px] justify-center items-center py-[30px] text-[20px]  bg-linear-to-t from-blue-800 to-indigo-500">
     <li>
       <NavLink 
         to="/" 
