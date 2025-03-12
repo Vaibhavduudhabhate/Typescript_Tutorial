@@ -37,18 +37,14 @@ export const About = () => {
         {products.map(product => (
           <div className="shadow-xl col-span-1 w-32 md:w-72 lg:w-96 h-fit bg-gray-100 hover:bg-base-200">
             <div className="h-32 bg-[url('https://placeimg.com/500/225/arch')] bg-cover bg-no-repeat bg-center">
-            {/* <Image src={product.image} layout="fill" objectFit="cover" /> */}
               <img className="object-cover h-[100%]" src={product.image} alt={product.title}
-            //  style={{ width: '200px', height: 'auto' }}
+              //  style={{ width: '200px', height: 'auto' }}
               />
             </div>
-        <div className="card-body">
-            <h2 className="card-title">{product.title}</h2>
-            <h2>Price: ${product.price}</h2>
-        </div>
-            {/* <h2 className="text-[20px] ">{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p> */}
+            <div className="card-body">
+              <h2 className="card-title">{product.title}</h2>
+              <h2>Price: ${product.price}</h2>
+            </div>
           </div>
         ))}
       </div>
