@@ -8,7 +8,9 @@ interface Product {
   category: string;
   image: string;
 }
-
+// ? sdsd
+// ! asasas
+// TODO 
 export const About = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
