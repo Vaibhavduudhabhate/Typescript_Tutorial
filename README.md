@@ -126,6 +126,9 @@ interface Person {
 }
 ```
 Example Files
+## 13. **Boolean Type**
+the boolean type represents a value that cn be either true or false .
+
 ### Ordered
 
 1. index1.ts - Type Annotations

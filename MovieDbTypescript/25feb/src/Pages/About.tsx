@@ -11,6 +11,8 @@ interface Product {
 // ? sdsd
 // ! asasas
 // TODO 
+// //  Hiii
+
 export const About = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -40,7 +42,7 @@ export const About = () => {
           <div className="shadow-xl col-span-1 w-32 md:w-72 lg:w-96 h-fit bg-gray-100 hover:bg-base-200">
             <div className="h-32 bg-[url('https://placeimg.com/500/225/arch')] bg-cover bg-no-repeat bg-center">
                <img className="object-cover h-[100%]" src={product.image} alt={product.title}
-              //  style={{ width: '200px', height: 'auto' }}
+              //Todo : style={{ width: '200px', height: 'auto' }}
               />
             </div>
             <div className="card-body">
