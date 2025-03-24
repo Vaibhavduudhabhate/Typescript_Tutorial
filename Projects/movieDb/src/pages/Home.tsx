@@ -11,8 +11,8 @@ interface Movies {
   poster_path: string;
 }
 
-const Home = () => {
-  const [movies, setMovies] = useState<Movies[]>([])
+const Home = ({ movies }: { movies: Movies[] }) => {
+  const [moviesmain, setMovies] = useState<Movies[]>([])
   useEffect(() => {
     const getMovies = async () => {
       try {
@@ -27,11 +27,35 @@ const Home = () => {
     getMovies();
   }, []);
   return (
-    <div className="max-w-7xl flex ml-auto mr-auto items-center justify-center ">
-      <div className="grid grid-cols-3  gap-4 flex-wrap justify-center w-full">
-        {movies.map((movies) => (
-          <MoviesCard key={movies.id} Movie={movies} />
-        ))}
+    // <div className="max-w-7xl flex ml-auto mr-auto items-center justify-center ">
+    //   <div className="grid grid-cols-3  gap-4 flex-wrap justify-center w-full">
+    //     {movies.map((movies) => (
+    //       <MoviesCard key={movies.id} Movie={movies} />
+    //     ))}
+    //   </div>
+    // </div>
+    <div className="max-w-7xl flex ml-auto mr-auto items-center justify-center">
+      <div className="grid grid-cols-3 gap-4 flex-wrap justify-center w-full">
+        {/* {movies.length > 0 ? (
+          movies.map((movie) => (
+            <MoviesCard key={movie.id} Movie={movie} />
+          ))
+        ) : (
+          <p className="text-center text-gray-500">No movies found.</p>
+        )} */}
+        {movies && movies.length > 0 ? (
+          movies.map((movie) => (
+            <MoviesCard key={movie.id} Movie={movie} />
+          ))
+        ) :
+          moviesmain && moviesmain.length > 0 ? (
+            moviesmain.map((movie) => (
+              <MoviesCard key={movie.id} Movie={movie} />
+            ))
+          ) : (
+            <p className="text-center text-gray-500">No movies found.</p>
+
+          )}
       </div>
     </div>
   )
