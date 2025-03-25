@@ -5,6 +5,7 @@ import TopRated from './pages/TopRated';
 import Upcoming from './pages/Upcoming';
 import { useState } from 'react';
 import { fetchSearchedMovies } from './Apis/Apis';
+import MovieDetails from './pages/MoviesDetails';
 interface Movies {
   id: number;
   title: string;
@@ -75,7 +76,7 @@ function App() {
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button className="bg-black text-white px-4 py-2 rounded-r">Search</button>
+            <button className="bg-black text-white px-4 py-2 rounded-r" onClick={()=>handleSearch()}>Search</button>
           </div>
         </div>
       </nav>
@@ -84,6 +85,7 @@ function App() {
         <Route path="/" element={<Home movies={searchMovies} />} />
         <Route path="/top-rated" element={<TopRated movies={searchMovies} />} />
         <Route path="/upcoming" element={<Upcoming movies={searchMovies} />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
     </Router>
   );

@@ -43,11 +43,12 @@ const Home = ({ movies }: { movies: Movies[] }) => {
         ) : (
           <p className="text-center text-gray-500">No movies found.</p>
         )} */}
-        {movies && movies.length > 0 ? (
-          movies.map((movie) => (
-            <MoviesCard key={movie.id} Movie={movie} />
-          ))
-        ) :
+        {
+          movies && movies.length > 0 ? (
+            movies.map((movie) => (
+              <MoviesCard key={movie.id} Movie={movie} />
+            ))
+          ) :
           moviesmain && moviesmain.length > 0 ? (
             moviesmain.map((movie) => (
               <MoviesCard key={movie.id} Movie={movie} />
