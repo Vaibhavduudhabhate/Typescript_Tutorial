@@ -6,7 +6,7 @@ import Upcoming from './pages/Upcoming';
 import { useState } from 'react';
 import { fetchSearchedMovies } from './Apis/Apis';
 import MovieDetails from './pages/MoviesDetails';
-import { Menu, MenuIcon, X } from "lucide-react"; // For icons
+import { Menu, X } from "lucide-react"; // For icons
 import ThemeToggle from './Components/LightDark';
 
 interface Movies {
