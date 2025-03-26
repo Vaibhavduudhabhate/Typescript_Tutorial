@@ -27,8 +27,8 @@ const Upcoming = ({ movies }: { movies: Movies[] }) => {
     getMovies();
   }, []);
   return (
-    <div className="max-w-7xl flex ml-auto mr-auto items-center justify-center ">
-      <div className="grid grid-cols-3  gap-4 flex-wrap justify-center w-full">
+    <div className="flex ml-auto mr-auto items-center justify-center ">
+      <div className="grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 flex-wrap justify-center w-full p-[30px]">
         {/* {movies.map((movies) => (
             <MoviesCard key={movies.id} Movie={movies} />
           ))} */}

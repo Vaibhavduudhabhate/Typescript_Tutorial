@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { fetchSearchedMovies } from './Apis/Apis';
 import MovieDetails from './pages/MoviesDetails';
 import { Menu, MenuIcon, X } from "lucide-react"; // For icons
+import ThemeToggle from './Components/LightDark';
 
 interface Movies {
   id: number;
@@ -39,9 +40,10 @@ function App() {
       <h1 className="text-2xl font-bold">
         <NavLink to="/">MovieDB</NavLink>
       </h1>
+      
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-6 items-center">
+      <div className="hidden lg:flex gap-6 items-center">
         <ul className="flex gap-6 text-lg">
           <li>
             <NavLink
@@ -85,15 +87,16 @@ function App() {
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           />
-          <button className="bg-black text-white px-4 py-2 rounded-r" onClick={handleSearch}>
+          <button className="cursor-pointer bg-black text-white px-4 py-2 rounded-r" onClick={handleSearch}>
             Search
           </button>
         </div>
+        <ThemeToggle />
       </div>
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-white focus:outline-none"
+        className="lg:hidden text-white focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -103,7 +106,7 @@ function App() {
       <div
         className={`fixed top-0 right-0 h-full w-[90%] bg-gray-900 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden z-50`}
+        } transition-transform duration-300 ease-in-out lg:hidden z-50`}
       >
         {/* Close Button */}
         <button className="absolute top-5 right-5 text-white" onClick={() => setIsOpen(false)}>
@@ -112,6 +115,7 @@ function App() {
 
         {/* Mobile Nav Links */}
         <ul className="flex flex-col gap-6 text-lg p-8 mt-12">
+        <ThemeToggle />
           <li>
             <NavLink
               to="/"
@@ -157,7 +161,7 @@ function App() {
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
             <button
-              className="bg-black text-white px-4 py-2 rounded-r"
+              className="bg-black cursor-pointer text-white px-4 py-2 rounded-r"
               onClick={() => {
                 handleSearch();
                 setIsOpen(false);
