@@ -81,7 +81,7 @@ const MovieDetails = () => {
             style={{ backgroundImage: `url(${ImgDomain}/${movie.backdrop_path})` }}
         >
             {/* Dark Overlay */}
-            <div className="absolute inset-0 md:left-1/2 bg-black opacity-50"></div>
+            <div className="absolute inset-0 md:left-1/2 bg-black opacity-10"></div>
         </div>
     </div>
 
