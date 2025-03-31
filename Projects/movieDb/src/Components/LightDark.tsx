@@ -15,9 +15,9 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 cursor-pointer bg-gray-200 dark:bg-gray-800 rounded-full transition-all w-[40px] md:w-[40px] sm:w-[40px]"
+      className="p-2 cursor-pointer bg-gray-200 dark:bg-yellow-400 rounded-full transition-all w-[40px] md:w-[40px] sm:w-[40px]"
     >
-      {theme === "dark" ? <Sun className="text-yellow-400" /> : <Moon className="text-gray-900" />}
+      {theme === "dark" ? <Sun className=" text-gray-900" /> : <Moon className="text-gray-900" />}
     </button>
   );
 };

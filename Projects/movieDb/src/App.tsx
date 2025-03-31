@@ -1,12 +1,12 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Home from './pages/Home';
 import TopRated from './pages/TopRated';
 import Upcoming from './pages/Upcoming';
 import { useState } from 'react';
 import { fetchSearchedMovies } from './Apis/Apis';
 import MovieDetails from './pages/MoviesDetails';
-import { Menu, X } from "lucide-react"; // For icons
+import { Menu, X } from "lucide-react"; 
 import ThemeToggle from './Components/LightDark';
 
 interface Movies {
@@ -18,14 +18,15 @@ interface Movies {
   poster_path: string;
 }
 function App() {
+  const navigate = useNavigate();
   const [searchMovies ,setSearchMovies] = useState<Movies[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-
   const handleSearch = async () => {
     try {
         const data = await fetchSearchedMovies(searchTerm);
         setSearchMovies(data);
+        navigate('/')
     } catch (error) {
       console.error("Error searching movies:", error);
     }
@@ -33,7 +34,7 @@ function App() {
 
   
   return (
-    <Router>
+    <>
 
 <nav className="bg-gray-800 text-white p-4 flex justify-between items-center relative">
       {/* Logo */}
@@ -181,7 +182,7 @@ function App() {
         <Route path="/upcoming" element={<Upcoming movies={searchMovies} />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
