@@ -52,7 +52,7 @@ const MovieDetails = () => {
     return (
         <div className="text-gray-900 dark:text-white min-h-screen">
             {/* Movie Header Section */}
-            <div className="relative flex flex-col md:flex-row max-w-6xl mx-auto h-[400px] md:h-[500px]">
+            <div className="relative z-0 flex flex-col md:flex-row max-w-6xl my-[72px] mx-auto h-[400px] md:h-[500px]">
                 {/* Left Side: Movie Details */}
                 <div className="w-full md:w-1/2 flex items-end p-6 bg-black">
                     <div className="flex items-center gap-6">

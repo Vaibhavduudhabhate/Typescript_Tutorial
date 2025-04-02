@@ -35,7 +35,7 @@ const Home = ({ movies }: { movies: Movies[] }) => {
     //   </div>
     // </div>
     <div className="flex ml-auto mr-auto items-center justify-center">
-     <div className="grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 flex-wrap justify-center w-full p-[30px]">
+     <div className="grid mt-[60px] max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 flex-wrap justify-center w-full p-[30px]">
 
         {/* {movies.length > 0 ? (
           movies.map((movie) => (

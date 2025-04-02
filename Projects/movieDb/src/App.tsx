@@ -36,7 +36,7 @@ function App() {
   return (
     <>
 
-<nav className="bg-gray-800 text-white p-4 flex justify-between items-center relative">
+<nav className="bg-gray-800 fixed top-0 z-1 text-white p-4 flex justify-between items-center w-full">
       {/* Logo */}
       <h1 className="text-2xl font-bold">
         <NavLink to="/">MovieDB</NavLink>
